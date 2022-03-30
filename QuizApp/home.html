@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/rules.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/8582a0674c.js" crossorigin="anonymous"></script>
+    <title>Quizz Game</title>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="assets/Logos/logo-de-Sena-sin-fondo-Blanco.png"
+         alt="">
+        <div class="navcont">
+            <label for="selectQuiz" id="consultGrupo" class="textSelectUser" style="display: flex;" onclick="seleccionarOne()">Haz click aqui y encuentra tu cuestionario</label>
+            <img src="assets/Icons/ring.svg" alt="" class="icon">                        
+            <p id="nombreAprendiz">Nombre Ejemplo</p>
+            <a href="cerrar_sesion.php"class="navbtn">Cerrar sesión</a>
+        </div>
+    </nav>
+    <div class="content_container">
+        <div class="sideCont">
+            <div class="categoryTitle">
+                <h2 class="title">CUESTIONARIOS RECIENTES</h2>
+            </div>
+            <div class="categoryCont" id="categoryCont">
+                <!-- <a href="#modal" class="gameLink link"><img src="assets/Fondos/bg1_2.jpg" alt=""><div class="gameDesc">Quiz de ADSI </div></a>
+                <a href="#" class="gameLink link"><img src="assets/Fondos/bg1_2.jpg" alt=""><div class="gameDesc">Quiz de TPS </div></a>
+                <a href="#" class="gameLink link"><img src="assets/Fondos/bg1_2.jpg" alt=""><div class="gameDesc">Quiz de ADSO </div></a>
+                <a href="#" class="gameLink link"><img src="assets/Fondos/bg1_2.jpg" alt=""><div class="gameDesc">Quiz de DIM </div></a> -->
+            </div>
+            <!-- <a href="#" id="quiz1" data-id="123" onclick="mostrar('quiz1')"><div class="texto">Hola Mundo</div>5515</a>
+            <a href="#" id="quiz2" data-id="1234" onclick="mostrar('quiz2')"><div class="texto">Hola Mundo2</div>5510</a> --><!-- EJEMPLO PARA VALIDAR LA PRUEBA -->
+        </div>
+    </div>
+
+    <aside id="modal" class="modal">
+        <div class="content-modal">
+            <header>
+                <a href="#" class="close-modal">X</a>
+                <h2>REGLAS DE JUEGO</h2>
+            </header>
+            <article>
+                <p style="text-align: center;"><img src="assets/fondos/bg2.jpg" alt="" width="60%" height="5%"></p>
+                <p style="padding-top: 10px;">1. Solo tendrá <span>20 segundos</span> por cada pregunta.</p>
+                <p>2. Una vez que seleccione su respuesta, no podrá volver a seleccionar.</p>
+                <p>3. No puede seleccionar ninguna opción una vez que se acaba el tiempo.</p>
+                <p>4. No puedes salir del Quiz mientras estás jugando.</p>
+                <p>5. Obtendrás puntos en base a tu respuesta correcta.</p>
+                <p>6. Tendras <span id="nayudas">x ayudas</span> para jugar un minijuegos y tengas la posibilidad de eliminar respuestas incorrectas.</p>
+                <div><button id="comenzarQuiz">COMENZAR</button></div>
+            </article>
+        </div>
+        <a href="#" class="btn-close-modal"></a>
+    </aside>
+
+</body>
+
+<script src="js/jquery-3.6.0.min.js"></script><!-- Este seria temporal luego usamos el cdn online -->
+<script src="js/home.js"></script>
+
+
+<!-- EJEMPLO PARA VALIDAR LA PRUEBA -->
+<script>
+    /* function mostrar(elemnt) {        
+        var elemento=document.getElementById(elemnt);
+        var codigo = elemento.getAttribute('data-id'); 
+        console.log(codigo);
+    } */
+</script>
+
+</html>

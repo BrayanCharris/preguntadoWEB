@@ -1,0 +1,91 @@
+.modal{
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    z-index: 99999999;
+    background: rgba(0, 0, 0, 0.781);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+
+
+.modal .content-modal{
+    width: 100%;
+    max-width: 500px;
+    position: fixed;
+    left: 50%;
+    top: -100vh;
+    transition: top 0.35s ease;
+    margin-left: -250px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    border-radius: 2px;
+    z-index: 99999999;
+    text-align: center;
+}
+.modal h2{
+    padding: 0.5em;
+    text-align: center;
+    color: white;
+    margin: 0;
+    background: #000;
+    border-radius: 10px;
+}
+
+.modal article{
+    height: 300px;
+    background: transparent;
+}
+.modal article img{
+    padding-top: 10px;
+    padding-left: 5px;
+    width: 80%;
+    height: 70%;
+    color: white;    
+}
+.modal article button{
+    margin-top: 5px;
+    padding: 10px;
+    cursor: pointer;    
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.close-modal{
+    color: #e74c3c;
+    position: absolute;
+    top: 0.2em;
+    right: 0.375em;
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.modal a:hover{
+    color: #c0392b;
+}
+
+.modal:target{
+    opacity: 1;
+    top: 0;
+}
+.modal .btn-close-modal{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999991;
+}
+.modal:target .content-modal{
+    top: 20%;
+    transition: top 0.35s ease;
+}
+

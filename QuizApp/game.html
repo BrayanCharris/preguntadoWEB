@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/end_time.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/8582a0674c.js" crossorigin="anonymous"></script>
+    <title>Quizz Game</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a><img src="assets/Logos/logo-de-Sena-sin-fondo-Blanco.png" alt=""></a>
+        <span class="navSpan">Categoria</span>
+
+        <span class="navSpan">1/20</span>
+        <span class="navSpan">0:20</span>
+
+        <div class="btnCont">
+            <button class="navBtn">ayuda</button>
+            <a href="table.html"><button class="navBtn">siquiente</button></a>
+        </div>
+
+    </nav>
+    <div class="content_container">
+        <div class="questContainer">
+            <p>¿Ejemplko pregunta
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde sapiente vero qui.?
+            </p>
+            <!-- <img src="assets/Fondos/bg1.jpg" alt=""> -->
+        </div>
+        <div class="answContainer">
+            <button class="answer" style="background-color: var(--answer1);">
+                SELECT FROM TABLES USUARIO WHERE NOMBRE DE TABLA = VALOR AND NOMBRE DE CAMPO = VALOR
+            </button>
+            <button class="answer answer2" style="background-color: var(--answer2);">
+                Lorem ipsum dolor sit amet.
+            </button>
+            <button class="answer answer3" style="background-color: var(--answer3);">
+                Lorem ipsum dolor sit amet.
+            </button>
+            <button class="answer answer4" style="background-color: var(--answer4);" onclick="mostrar()">
+                Lorem ipsum dolor sit amet.
+            </button>
+        </div>
+    </div>
+
+    <aside id="modal" class="modal">
+        <div class="content-modal">
+            <header>
+                <!-- <a href="#" class="close-modal">X</a> -->
+                <h2>TIEMPO AGOTADO 🤦‍♂️</h2>
+            </header>
+            <article>
+                <img alt="" id="imagen">
+                <br>
+                <button onclick="ocultar()">CONTINUAR</button>
+            </article>
+        </div>
+        <a href="#" class="btn-close-modal"></a>
+    </aside>
+
+</body>
+
+<script src="js/game.js"></script>
+</html>
