@@ -119,8 +119,6 @@ INSERT INTO configuracion_juego_grupo(id_grupo,codigo_categoria,numero_preguntas
 
 SELECT numero_preguntas FROM configuracion_juego_grupo WHERE id_grupo=1;
 
-
-
 #SELECT nombre_grupo FROM grupos ORDER BY nombre_grupo;
                                             
 #SELECT c.codigo_categoria,nombre_categoria,pregunta,resp_correcta,resp_incorrecta1,resp_incorrecta2,resp_incorrecta3 FROM categorias AS c INNER JOIN preguntas as p ON p.codigo_categoria=c.codigo_categoria INNER JOIN respuestas AS r ON R.codigo_pregunta=P.codigo_pregunta ORDER BY rand() limit 2;
