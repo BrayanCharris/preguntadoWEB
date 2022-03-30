@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-03-2022 a las 05:09:53
+-- Tiempo de generación: 30-03-2022 a las 05:47:53
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -33,15 +33,8 @@ CREATE TABLE `aprendices` (
   `correo` varchar(30) NOT NULL,
   `contrasena` varchar(50) DEFAULT NULL,
   `id_grupo` bigint(20) DEFAULT NULL,
-  `numeroGrupo` varchar(10) NOT NULL
+  `numeroFicha` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `aprendices`
---
-
-INSERT INTO `aprendices` (`id_aprendiz`, `nombre_aprendiz`, `correo`, `contrasena`, `id_grupo`, `numeroGrupo`) VALUES
-(1, 'BRAYAN JESUS CHARRIS CANTILLO', 'bjcharris4@misena.edu.co', '123456789', 1, '2154080');
 
 -- --------------------------------------------------------
 
@@ -74,18 +67,26 @@ CREATE TABLE `configuracion_juego_grupo` (
   `id_config` bigint(20) NOT NULL,
   `id_grupo` bigint(20) DEFAULT NULL,
   `codigo_categoria` bigint(20) DEFAULT NULL,
-  `numero_preguntas` bigint(20) DEFAULT NULL
+  `numero_preguntas` bigint(20) DEFAULT NULL,
+  `fecha` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `configuracion_juego_grupo`
 --
 
-INSERT INTO `configuracion_juego_grupo` (`id_config`, `id_grupo`, `codigo_categoria`, `numero_preguntas`) VALUES
-(1, 1, 123, 2),
-(2, 1, 1234, NULL),
-(3, 1, 12345, NULL),
-(4, 1, 12346, NULL);
+INSERT INTO `configuracion_juego_grupo` (`id_config`, `id_grupo`, `codigo_categoria`, `numero_preguntas`, `fecha`) VALUES
+(1, 1, 123, 2, '2022-03-29 22:47:00'),
+(2, 1, 1234, NULL, '2022-03-29 22:47:00'),
+(3, 1, 12345, NULL, '2022-03-29 22:47:00'),
+(4, 1, 123456, NULL, '2022-03-29 22:47:00'),
+(5, 4, 123, 3, '2022-03-29 22:47:00'),
+(6, 4, 123456, NULL, '2022-03-29 22:47:00'),
+(7, 4, 1234, NULL, '2022-03-29 22:47:00'),
+(8, 2, 123, 4, '2022-03-29 22:47:00'),
+(9, 2, 123456, NULL, '2022-03-29 22:47:00'),
+(10, 3, 123, 2, '2022-03-29 22:47:00'),
+(11, 3, 1234, NULL, '2022-03-29 22:47:00');
 
 -- --------------------------------------------------------
 
@@ -106,9 +107,9 @@ INSERT INTO `grupos` (`id_grupo`, `nombre_grupo`) VALUES
 (1, 'ADSI'),
 (2, 'MULTIMEDIA'),
 (3, 'ADSO'),
-(4, 'TSCC'),
-(5, 'SISTEMAS'),
-(6, 'TPS');
+(4, 'TPS'),
+(5, 'TSCC'),
+(6, 'SISTEMAS');
 
 -- --------------------------------------------------------
 
@@ -127,13 +128,13 @@ CREATE TABLE `preguntas` (
 --
 
 INSERT INTO `preguntas` (`codigo_pregunta`, `pregunta`, `codigo_categoria`) VALUES
-('ABC', '¿Qué significa HTML?', 123),
-('ABCD', '¿Qué significa CSS?', 123),
+('ABC', '¿Que significa HTML?', 123),
+('ABCD', '¿Que significa CSS?', 123),
 ('ABCD1234', '¿Como se imprime en pyhton?', 123456),
-('ABCDE', '¿Qué significa PHP?', 123),
+('ABCDE', '¿Que significa PHP?', 123),
 ('ABCDEF', 'What does XML stand for?', 123),
 ('ABCDEFG', 'Como hacer una consulta en SQL?', 1234),
-('ABCDEFGh', '¿Cuál es la distribución de Linux más usada?', 12345);
+('ABCDEFGh', '¿Cuál es la distribución de Linux mas usada?', 12345);
 
 -- --------------------------------------------------------
 
@@ -275,13 +276,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `aprendices`
 --
 ALTER TABLE `aprendices`
-  MODIFY `id_aprendiz` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_aprendiz` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `configuracion_juego_grupo`
 --
 ALTER TABLE `configuracion_juego_grupo`
-  MODIFY `id_config` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_config` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `grupos`
