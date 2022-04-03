@@ -1,0 +1,178 @@
+.modal2{
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    z-index: 99999999;
+    background: rgba(0, 0, 0, 0.781);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.gameRPS footer{
+    text-align: center;
+    padding: 5px;
+}
+
+.gameRPS footer button{
+    cursor: pointer;
+    padding: 8px;
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.gameRPS footer button:hover{
+    background-color: #007bff;
+    color: #fff;
+}
+
+.gameRPS button{
+    border-radius: 8px;    
+    margin: 5px;
+    margin-bottom: 4px;
+}
+
+.gameRPS{
+    max-width: 450px;
+    height: 100vh;
+    max-height: 750px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2),
+                0px 6px 20px 0 rgba(0,0,0,0.19);
+    transition: all 0.3s ease;
+    user-select: none;
+
+    background-size: cover;
+    color: #fff;
+    background-position: center;
+    background: #000;
+    backdrop-filter: blur(0px);
+    justify-content: center;
+}
+
+/* .gameRPS.activeMiniGame{
+    opacity: 1;
+    pointer-events: auto;
+} */
+
+.gameRPS h1{
+    font-size: 24px;
+    text-align: center;
+    
+}
+
+
+#resultGame{
+   text-align: center;
+}
+
+#resultGame img{
+    width: 30%;
+}
+
+#start-text{
+    font-size: 20px;
+    padding: 20px;
+}
+
+#group-btn{
+    width: 100%;
+    display: flex;
+}
+
+#group-btn button{
+    background: transparent;
+    border: 1p solid white;
+    
+    cursor: pointer;
+}
+
+#group-btn > button > img{
+    width: 100%;
+}
+
+/* .modal2 .content-modal{
+    width: 100%;
+    max-width: 500px;
+    position: fixed;
+    left: 50%;
+    top: -100vh;
+    transition: top 0.35s ease;
+    margin-left: -250px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    border-radius: 2px;
+    z-index: 99999999;
+    text-align: center;
+}
+.modal2 h2{
+    padding: 0.5em;
+    text-align: center;
+    color: white;
+    margin: 0;
+    background: #000;
+    border-radius: 10px;
+}
+
+.modal2 article{
+    height: 300px;
+    background: transparent;
+}
+.modal2 article img{
+    padding-top: 10px;
+    padding-left: 5px;
+    width: 80%;
+    height: 70%;
+    color: white;    
+}
+.modal2 article button{
+    margin-top: 5px;
+    padding: 10px;
+    cursor: pointer;    
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.close-modal{
+    color: #e74c3c;
+    position: absolute;
+    top: 0.2em;
+    right: 0.375em;
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.modal2 a:hover{
+    color: #c0392b;
+}
+ */
+.modal2:target{
+    opacity: 1;
+    top: 0;
+}
+/* .modal2 .btn-close-modal{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999991;
+}
+.modal2:target .content-modal{
+    top: 20%;
+    transition: top 0.35s ease;
+}
+ */

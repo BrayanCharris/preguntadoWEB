@@ -84,12 +84,18 @@ function retornarOnclick(valor) {
 }
 
 $( "#comenzarQuiz" ).on( "click", function() {
-    window.location.href="game.html";
+    $.ajax({
+        url:'admin/iniciar_Juego.php',
+        type: 'POST',
+        success: function(resp){
+            window.location.href="game.html";
+        }
+    });
 });
 
 $(function(){
     $.ajax({
-        url: 'admin/validarAccesoQuiz.php',
+        url: 'admin/validarAccesoHome.php',
         type: 'POST',
         success : function(resp){
             if (!resp) {

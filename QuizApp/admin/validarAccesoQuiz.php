@@ -3,8 +3,8 @@
 
     $acceder=false;
 
-    if (isset($_SESSION['idGrupo'])) {
-        $acceder=true;
+    if (isset($_SESSION['jugando'])) {   
+        $acceder=$_SESSION['jugando'];
     }
 
     echo $acceder;

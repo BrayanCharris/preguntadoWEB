@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="css/end_time.css">
+    <link rel="stylesheet" href="css/mini_juego.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,25 +18,23 @@
 <body>
     <nav class="navbar">
         <a><img src="assets/Logos/logo-de-Sena-sin-fondo-Blanco.png" alt=""></a>
-        <span class="navSpan">Categoria</span>
+        <span class="navSpan categoryInfo">Diseño web</span>
 
-        <span class="navSpan">1/20</span>
-        <span class="navSpan">0:20</span>
+        <span class="navSpan pregunt"> <span class="numbPregunta">0</span>&nbsp;/ <span class="totalPreg">20</span></span>
+        <span class="navSpan time">00:20</span>
 
         <div class="btnCont">
-            <button class="navBtn">ayuda</button>
-            <a href="table.html"><button class="navBtn">siquiente</button></a>
+            <button class="navBtn btnayuda">Ayuda</button>
+            <button class="navBtn btnNext">Siguiente</button>
         </div>
 
     </nav>
     <div class="content_container">
         <div class="questContainer">
-            <p>¿Ejemplko pregunta
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde sapiente vero qui.?
-            </p>
+            <p class="pregunta">¿Ejemplko pregunta Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde sapiente vero qui.?</p>
             <!-- <img src="assets/Fondos/bg1.jpg" alt=""> -->
         </div>
-        <div class="answContainer">
+        <div class="answContainer optionsList">
             <button class="answer" style="background-color: var(--answer1);">
                 SELECT FROM TABLES USUARIO WHERE NOMBRE DE TABLA = VALOR AND NOMBRE DE CAMPO = VALOR
             </button>
@@ -45,11 +44,13 @@
             <button class="answer answer3" style="background-color: var(--answer3);">
                 Lorem ipsum dolor sit amet.
             </button>
-            <button class="answer answer4" style="background-color: var(--answer4);" onclick="mostrar()">
+            <button class="answer answer4" style="background-color: var(--answer4);">
                 Lorem ipsum dolor sit amet.
             </button>
         </div>
     </div>
+
+    
 
     <aside id="modal" class="modal">
         <div class="content-modal">
@@ -60,13 +61,49 @@
             <article>
                 <img alt="" id="imagen">
                 <br>
-                <button onclick="ocultar()">CONTINUAR</button>
+                <button onclick="ocultarTodo()">CONTINUAR</button>
             </article>
         </div>
         <a href="#" class="btn-close-modal"></a>
     </aside>
 
+    <aside id="modal2" class="modal2">
+        <div class="gameRPS">
+        
+            <h1>Mini Juego(Rock,Paper and Scissors)</h1>
+            
+            <footer>
+                <button id="continueQue" class="continueQue" >Continuar Quiz</button>
+            </footer>
+            <div id="resultGame">
+    
+                <img id="machine-img" src="assets/Icons/piedra.png" alt="">
+                
+                <div id="start-text">
+                    Elige una opcion para Comenzar
+                </div>
+    
+                <img id="user-img" src="assets/Icons/piedra.png" alt="">
+            </div>        
+    
+            <div id="group-btn">
+                <button id="rock" type="button">
+                    <img  class="btn-user" src="assets/Icons/piedra.png" alt="">
+                </button>
+                <button id="paper" type="button">
+                    <img  class="btn-user" src="assets/Icons/papel.png" alt="">
+                </button>
+                <button id="scissors" type="button">
+                    <img  class="btn-user" src="assets/Icons/tijeras.png" alt="">
+                </button>
+            </div>
+    
+        </div>
+    </aside>
+
 </body>
 
+<script src="js/jquery-3.6.0.min.js"></script><!-- Este seria temporal luego usamos el cdn online -->
 <script src="js/game.js"></script>
+<script src="js/mini_juego.js"></script>
 </html>

@@ -19,6 +19,7 @@
     --answer4: #2c9ca6;
     --correct: #62c370;
     --incorrect: #ef3c69;
+    --default: #5e5e5e;
 }
 body{
     width: 100vw;
@@ -29,6 +30,11 @@ body{
     padding: 0;
     margin: 0;
     position: relative;
+}
+
+.hideNavbar,.hideQuiz{
+    opacity: 0;
+    pointer-events: none;
 }
 
 .navbar{
@@ -76,7 +82,7 @@ body{
     overflow: hidden;
 }
 .questContainer p{
-    font-size: 26px;
+    font-size: 30px;
 }
 .questContainer img{
     max-height: 200px;
@@ -201,4 +207,25 @@ span{
 }
 .navSpan{
     margin: 0 15px;
+    
+}
+
+/* .option_list .answer.correct{
+    color: #fff;
+    background: var(--correct);
+    border-color: #155724;
+}
+
+.option_list .answer.incorrect{
+    color: #fff;
+    background: var(--incorrect);
+    border-color: #721c24;
+} */
+/* Barra superio otra manera de pocisionarlos ya que se saturan */
+@media screen and (max-width: 693px) {
+    
+}
+/* posicion de los botones cambiarlos a columna uno debajo del otro y que ocupen todo el ancho */
+@media screen and (max-width: 571px) {
+    
 }

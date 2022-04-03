@@ -5,7 +5,7 @@
 
     /* ------Consultar id de los grupos que estan habilitados para la prueba ------- */
 
-    $query1="SELECT DISTINCT(id_grupo) FROM configuracion_juego_grupo ORDER BY fecha DESC";
+    $query1="SELECT DISTINCT(id_grupo) FROM configuracion_juego_grupo ORDER BY id_grupo DESC;";
 
     $resultado1= mysqli_query($connection,$query1);
 
